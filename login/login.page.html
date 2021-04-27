@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background-pic">
+     <div class="background-filter">
+      
+
+       <ion-card>
+         <ion-card-header>
+           <ion-card-title>
+            Bem vindo
+           </ion-card-title>
+           <ion-card-subtitle>
+            Faça o login
+           </ion-card-subtitle>
+         </ion-card-header>
+         <ion-card-content>
+            <ion-item>
+             <ion-input placeholder="Email Adress"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Password"></ion-input>
+             
+           
+            <button (click)="togglePasswordFieldType()" >
+              <ion-icon [name]="isTextFieldType ? 'eye-off' : 'eye'"></ion-icon>
+            </button>
+            </ion-item> 
+           
+
+            <div class="bottom-section">
+              <ion-button routerLink="/form">Login</ion-button>
+              <span> Ainda não possui acesso? <a href="http://localhost:8100/signup"> Cadastre-se</a></span>
+            </div>
+         </ion-card-content>
+       </ion-card>
+     </div>
+  </div>
+
+</ion-content>
