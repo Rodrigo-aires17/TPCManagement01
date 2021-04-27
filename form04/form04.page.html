@@ -1,0 +1,35 @@
+
+
+
+<ion-content>
+     
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="form03"></ion-back-button>
+      </ion-buttons>
+    
+      </ion-toolbar>
+  </ion-header>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+   Selecione os acessos necessários:
+          </ion-card-title>
+          <div></div>
+          <ion-card-subtitle>
+          <strong>Selecione a opção correta!</strong>
+          <div></div>
+        
+          <!-- Checkboxes in a List -->
+          <ion-list>
+            <ion-item *ngFor="let entry of form">
+              <ion-label>{{entry.val}}</ion-label>
+              <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+          <div class="bottom-section">
+            <ion-button routerLink="/confirm" >Submeter</ion-button>
+          </div>
+       
+ 
