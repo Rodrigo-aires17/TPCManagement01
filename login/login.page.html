@@ -24,21 +24,17 @@
          </ion-card-header>
          <ion-card-content>
             <ion-item>
-             <ion-input placeholder="Email Adress"></ion-input>
+             
+              <ion-input id="email" type="text" class="botao-entrar ion-padding" placeholder="E-mail"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input placeholder="Password"></ion-input>
-             
-           
-            <button (click)="togglePasswordFieldType()" >
-              <ion-icon [name]="isTextFieldType ? 'eye-off' : 'eye'"></ion-icon>
-            </button>
+              <ion-input id="pass" type="password" class="botao-entrar ion-padding" placeholder="Senha"></ion-input>
             </ion-item> 
            
 
             <div class="bottom-section">
-              <ion-button routerLink="/form">Login</ion-button>
-              <span> Ainda não possui acesso? <a href="http://localhost:8100/signup"> Cadastre-se</a></span>
+              <ion-button routerLink="/form" >Login</ion-button>
+             
             </div>
          </ion-card-content>
        </ion-card>

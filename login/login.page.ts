@@ -9,16 +9,26 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  isTextFieldType: boolean;
-  constructor( private router: Router, public navCtrl : NavController) { }
+  public login(){
+    let email = (document.getElementById('email') as HTMLInputElement).value
+    let senha = (document.getElementById('password') as HTMLInputElement).value
+
+    if (email == localStorage.getItem('email') && senha == localStorage.getItem('pass')) {
+      console.log("OK!")
+      window.location.href="/form"
+    }
+
+    else {
+      alert("Usuário ou senha incorretos!")
+    }
+    
+  }
+
+  constructor() { 
+    
+  }
 
   ngOnInit() {
   }
 
-  navigateToLoginPage(){
- this.router.navigate(['home'])
-  }
-  togglePasswordFieldType(){
-    this.isTextFieldType = !this.isTextFieldType;
-}
 }
