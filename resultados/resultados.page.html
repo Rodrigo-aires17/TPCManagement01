@@ -1,0 +1,33 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="main"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Solicitações
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let user of users" [routerLink]="['/edit', user.id]">
+      <ion-label>
+        <h2>
+          {{user.id}}
+        </h2>
+        <p>{{user.name}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/form">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
